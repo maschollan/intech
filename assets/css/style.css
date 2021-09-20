@@ -1,0 +1,217 @@
+body {
+    font-family: "Nunito", sans-serif;
+    color: #222;
+    position: relative;
+    background: #ccc;
+    height: 100vh;
+}
+
+body * {
+    transition: all 0.3s;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.25);
+}
+
+.cardview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.cardview.show {
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .cardview .col-sm-12 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.cardview-dialog {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+.cardview-header {
+    padding: 1rem 1rem 0.5rem;
+    box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.25);
+}
+
+.cardview-body {
+    padding: 1rem;
+    overflow-y: auto;
+    height: 0px;
+    opacity: 0;
+    position: relative;
+}
+
+.cardview-body.cardview-expand {
+    height: calc(100vh - 100px);
+    opacity: 1;
+}
+
+.cardview-body.cardview-expand.card-body {
+    height: calc(100vh - 160px);
+}
+
+.hover-gray:hover {
+    background-color: #ddd;
+}
+
+.cursor-pointer, 
+.cursor-pointer-all,
+.cursor-pointer-all * {
+    cursor: pointer !important;
+}
+
+.badge-outline {
+    color:#666;
+    border:1px solid #666;
+}
+
+.btn-outline-light {
+    color: #aaa;
+    border: 1px solid #aaa;
+}
+
+label.radio {
+    cursor: pointer;
+    width: 100%;
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+label.radio span {
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    display: inline-block;
+    color: #888a8c;
+    border-radius: 2rem;
+}
+
+label.radio:hover input + span {
+    border-color: #0d6efd;
+    color: #0d6efd;
+}
+
+label.radio input:checked + span {
+    border-color: #0d6efd;
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.breadcrumb>li+li:before {
+    content: "//" !important;
+    color: #ccc !important;
+}
+
+.breadcrumb li a {
+    text-decoration: none !important;
+    color: #aaa
+}
+
+.breadcrumb {
+    letter-spacing: 1px;
+    border-radius: 8px !important;
+    margin-bottom: 0;
+    background-color: unset;
+}
+
+@media (max-width: 767px) {
+    .breadcrumb-item+.breadcrumb-item {
+        padding-left: 0
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        padding: 0 .15em !important;
+    }
+}
+
+.breadcrumb li:hover a {
+    color: #666
+}
+
+.active-1 {
+    color: #0d6efd !important;
+    font-weight: bolder
+}
+
+#carousel-home {
+    margin-bottom: -120px;
+}
+
+.carousel-banner {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-banner img {
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-banner::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    filter: blur(0.2);
+}
+
+.carousel-content {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+
+.carousel-content h1 {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.25rem;
+}
+
+.carousel-content h5 {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1.25rem;
+}
